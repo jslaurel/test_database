@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @appliance.id %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @appliance.time %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @appliance.day %>
+</p>
+
+<p>
+  <strong>Power:</strong>
+  <%= @appliance.power %>
+</p>
+
+<p>
+  <strong>Total power:</strong>
+  <%= @appliance.total_power %>
+</p>
+
+<%= link_to 'Edit', edit_appliance_path(@appliance) %> |
+<%= link_to 'Back', appliances_path %>

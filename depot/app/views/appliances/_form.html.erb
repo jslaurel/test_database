@@ -1,0 +1,37 @@
+<%= form_for(@appliance) do |f| %>
+  <% if @appliance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appliance.errors.count, "error") %> prohibited this appliance from being saved:</h2>
+
+      <ul>
+      <% @appliance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.datetime_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br>
+    <%= f.date_select :day %>
+  </div>
+  <div class="field">
+    <%= f.label :power %><br>
+    <%= f.text_field :power %>
+  </div>
+  <div class="field">
+    <%= f.label :total_power %><br>
+    <%= f.text_field :total_power %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
